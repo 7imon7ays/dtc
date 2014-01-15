@@ -3,6 +3,16 @@ dtc
 
 Linux command to scan a directory for an expression.
 
+In any directory, find where an expression occurs by calling
+
+    dtc *expression*
+
+from the command line. For example, to detect where your files contain "console.log", run
+
+    dtc console.log
+
+This will print the name of each file containing that expression followed by the line number and the line.
+
 ===
 
 To install, run
