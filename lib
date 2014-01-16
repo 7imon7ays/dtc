@@ -1,10 +1,10 @@
-# dtc to detect an expression in your file
-
 function dtc {
-  if [[ $* == *-not* ]];
+  if [[ $* == *-not* ]]
   then
-    if [[ -z $3 ]];
+    if [[ -z $3 ]]
     then printf "directory to ignore not provided."
+    elif [[ ! -d "$3" ]]
+    then printf "directory to ignore '"$3"' not found."
     else
       grep -nr --exclude="*$3*" "$1" . | grep .d;
       printf $"\nignored $3";
