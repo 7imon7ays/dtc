@@ -7,7 +7,7 @@ function dtc {
     then printf "directory to ignore '"$3"' not found."
     else
       grep -nr --exclude="*$3*" "$1" . | grep .d;
-      printf $"\nignored $3";
+      printf $"\nignored '"$3"';
     fi
   else
     grep -nr "$1" . | grep .d;
