@@ -1,7 +1,7 @@
 dtc
 ===
 
-Linux command to scan a directory for an expression.
+Bash command to scan a directory for an expression.
 
 In any directory, find where an expression occurs by calling
 
@@ -11,7 +11,13 @@ from the command line. For example, to detect where your files contain "console.
 
     dtc console.log
 
-This will print the name of each file containing that expression followed by the line number and the line.
+This will print the name of every file containing that expression followed by the line number of the occurence and the line itself.
+
+To ignore a directory, add the "-not" flag.
+
+    dtc console.log -not "node_modules"
+
+For now you can only ignore one directory at a time. More to come!
 
 ===
 
